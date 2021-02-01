@@ -37,7 +37,7 @@ Basic Usage
 ```yaml
 steps:
   - name: Wait for Netlify Deploy
-    uses: probablyup/wait-for-netlify-action@3.2.0
+    uses: butcherbox/wait-for-netlify-action@3.2.0
     id: waitForDeployment
     with:
       site_id: 'YOUR_SITE_ID' # See Settings > Site Details > General in the Netlify UI
@@ -69,7 +69,7 @@ jobs:
           run: npm ci
 
         - name: Wait for Netlify
-          uses: probablyup/wait-for-netlify-action@3.2.0
+          uses: butcherbox/wait-for-netlify-action@3.2.1
           id: waitForDeployment
           with:
             site_id: '[your site ID here]'
@@ -116,7 +116,7 @@ jobs:
         run: |
           npm run build
       - name: Waiting for 200 from Netlify
-        uses: probablyup/wait-for-netlify-action@3.2.0
+        uses: butcherbox/wait-for-netlify-action@3.2.0
         id: waitForNetlifyDeploy
         with:
           site_id: 'YOUR_SITE_ID' # See Settings > Site Details > General in the Netlify UI
